@@ -5,7 +5,7 @@
 FROM	heussd/git as gitsrc
 WORKDIR /ftr
 RUN	git clone https://git.sira.ai/ali2kan/fulltextrss.git . && \
-		git reset --hard 384d52fd83361ffd6e7f28bd39b322970a015a28
+		git reset --hard 
 
 
 FROM	heussd/git as gitconfig
