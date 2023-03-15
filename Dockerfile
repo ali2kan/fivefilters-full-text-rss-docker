@@ -4,13 +4,13 @@
 
 FROM	heussd/git as gitsrc
 WORKDIR /ftr
-RUN	git clone https://bitbucket.org/fivefilters/full-text-rss.git . && \
+RUN	git clone https://git.sira.ai/ali2kan/fulltextrss.git . && \
 		git reset --hard 384d52fd83361ffd6e7f28bd39b322970a015a28
 
 
 FROM	heussd/git as gitconfig
 WORKDIR	/ftr-site-config
-RUN	git clone https://github.com/fivefilters/ftr-site-config . 
+RUN	git clone https://git.sira.ai/ali2kan/fulltextrss/src/branch/main/site_config/standard . 
 
 
 FROM	php:5-apache
