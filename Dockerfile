@@ -10,7 +10,7 @@ RUN	git clone https://git.sira.ai/ali2kan/fulltextrss.git . && \
 
 FROM	heussd/git as gitconfig
 WORKDIR	/ftr-site-config
-RUN	git clone https://git.sira.ai/ali2kan/fulltextrss/src/branch/main/site_config/standard . 
+RUN	git clone https://git.sira.ai/ali2kan/site_config.git . 
 
 
 FROM	php:5-apache
