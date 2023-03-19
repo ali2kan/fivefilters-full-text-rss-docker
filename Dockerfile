@@ -26,7 +26,7 @@ COPY --from=gitsrc /ftr /var/www/html
 COPY --from=gitconfig /ftr-site-config/.* /ftr-site-config/* /var/www/html/site_config/standard/
 
 RUN		mkdir -p /var/www/html/cache/rss && \
-			chmod -Rv 777 /var/www/html/cache && \
+			chmod -Rv 777 /var/www/html/cache/rss && \
 			chmod -Rv 777 /var/www/html/site_config
 
 VOLUME	/var/www/html/cache
