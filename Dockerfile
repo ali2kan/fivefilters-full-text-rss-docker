@@ -13,7 +13,7 @@ WORKDIR	/ftr-site-config
 RUN	git clone https://git.sira.ai/ali2kan/site_config.git . 
 
 
-FROM	php:5-apache
+FROM	php:8.1.17-apache
 
 RUN   apt-get update && \
       apt-get -y install --no-install-recommends \
