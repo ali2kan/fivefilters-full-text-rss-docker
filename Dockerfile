@@ -21,6 +21,7 @@ RUN echo "deb http://archive.debian.org/debian stretch main contrib non-free" > 
 RUN apt-get update && \
     apt-get -y install --no-install-recommends \
     libtidy-dev \
+    libzip-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install tidy
