@@ -22,9 +22,14 @@ RUN apt-get update && \
     apt-get -y install --no-install-recommends \
     libtidy-dev \
     libzip-dev \
+    zip \
+    zlib1g-dev \
+    libcurl4-openssl-dev \
+    libxml2-dev \
+    libicu-dev \
     && rm -rf /var/lib/apt/lists/*
 
-RUN docker-php-ext-install tidy
+RUN docker-php-ext-install tidy zip curl xml mbstring iconv intl
 
 COPY php.ini /usr/local/etc/php/
 
