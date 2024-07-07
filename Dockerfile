@@ -24,7 +24,7 @@ RUN   apt-get update && \
 
 RUN		docker-php-ext-install tidy
 
-COPY php.ini /usr/local/etc/php/
+# Removed the php.ini copy line
 
 COPY --from=gitsrc /ftr /var/www/html
 
@@ -39,4 +39,3 @@ VOLUME	/var/www/html/cache
 VOLUME  /var/www/html/site_config/standard
 
 COPY	custom_config.php /var/www/html/
-
